@@ -1,5 +1,32 @@
 import numpy as np
 
+SMPL_JOINTS_OPTIMIZED = [
+'Pelvis',
+'L_Hip',
+'R_Hip',
+'Spine1',
+'L_Knee',
+'R_Knee',
+'Spine2',
+'L_Ankle',
+'R_Ankle',
+'Spine3',
+'L_Foot',
+'R_Foot',
+'Neck',
+'L_Collar',
+'R_Collar',
+'Head',
+'L_Shoulder',
+'R_Shoulder',
+'L_Elbow',
+'R_Elbow',
+'L_Wrist',
+'R_Wrist',
+'L_Hand',
+'R_Hand'
+]
+
 SMPL_JOINTS = {
     "hips": 0,
     "leftUpLeg": 1,
