@@ -136,6 +136,14 @@ class StageOptimizer(object):
             out_path = f"{out_dir}/{seq_name}_{i:06d}_{name}_results.npz"
             Logger.log(f"saving params to {out_path}")
             np.savez(out_path, **results)
+            optimized_data = {
+                'trajectory': optimized_trajectory.tolist(),
+                'betas': betas.tolist(),
+                'smpl_joints': smpl_joints.tolist()
+            }
+            json_path = os.path.join(output_path, 'optimized_data.json')
+            with open(json_path, 'w') as json_file:
+                json.dump(optimized_data, json_file)
 
         # also save the cameras
         with torch.no_grad():
